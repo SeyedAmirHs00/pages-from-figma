@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head dir="rtl">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Koulen' rel='stylesheet'>
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Koulen;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #101417;
+        }
+
+        header {
+            background-color: #34A8FF;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            min-height: 187.5px;
+        }
+
+        .logo {
+            color: #101417;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo h1 {
+            font-size: 80px;
+            font-weight: 400;
+            line-height: 55px;
+        }
+
+        .logo p {
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        .box {
+            width: 338px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: rgba(52, 168, 255, 0.5);
+            color: #D9D9D9;
+            padding: 25px 19px;
+        }
+
+        .box img {
+            width: 91.5px;
+            height: 100px;
+            border-radius: 10px;
+            background-color: #D9D9D9;
+            float: left;
+            margin-right: 9.5px;
+        }
+
+        .box h1 {
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+
+        .box p {
+            color: #A9A9A9;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .box .price {
+            color: #D9D9D9;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: normal;
+            width: 32px;
+            float: right;
+            margin-top: 5px;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    
+        .menu .category .category-h {
+            text-align: center;
+            color: #D9D9D9;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 21.5px;
+            margin-bottom: 18px;
+        }
+
+        .menu .category ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        /*.category-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }*/
+
+
+        @media screen and (max-width: 1030px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu .category ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .menu .category .category-h {
+                text-align: left;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            .menu .category ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>MYCAFE</h1>
+            <p>WE ARE THE BEST</p>
+        </div>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="category">
+                <h1 class="category-h">APPETIZER</h1>
+                <ul calss="category-list">
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="category">
+                <h1 class="category-h">MAIN DISHES</h1>
+                <ul calss="category-list">
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="category">
+                <h1 class="category-h">DRINKS</h1>
+                <ul calss="category-list">
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <img src="" alt="">
+                            <h1>ITEM</h1>
+                            <p>Ingredient: Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                            <p class="price">249T</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
