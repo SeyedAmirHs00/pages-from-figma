@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <title>Writing for Developers</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Recursive&family=Source+Sans+3&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            margin: 0;
+            background-color: #232830;
+            padding: 90px 218px;
+        }
+
+        nav {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin: 0 auto;
+        }
+
+        nav>a {
+            font-size: 30px;
+            position: relative;
+            top: -7px;
+        }
+
+        nav>ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            padding: 0px 18px;
+            font-size: 24px;
+        }
+
+        header {
+            margin-top: 73px;
+            margin-bottom: 100px;
+        }
+
+        header>img {
+            display: block;
+            margin: 0 auto;
+            width: 194px;
+            height: 204px;
+        }
+
+        header>h1 {
+            color: #FF7575;
+            font-family: 'Recursive', sans-serif;
+            font-size: 71px;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 17px;
+        }
+
+        header>p {
+            color: #FFF;
+            margin-top: 17px;
+            font-family: 'Popins', sans-serif;
+            font-size: 29px;
+            text-align: center;
+        }
+
+        hr {
+            position: relative;
+            width: 100%;
+            background-color: #4D4D4D;
+            opacity: 0.2;
+
+        }
+
+        .tag-list {
+            height: 40px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 41px;
+        }
+
+        .tag-list>.tag-list-icons {
+            display: flex;
+            gap: 18px;
+        }
+
+        .tag-list img {
+            height: 24px;
+            width: 24px;
+        }
+
+        .tag-list>ul {
+            position: relative;
+            top: 3px;
+            list-style-type: none;
+            padding: 17px 0;
+            box-sizing: content-box;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            overflow-x: auto;
+            gap: 36px;
+            font-size: 27px;
+            font-family: 'Recursive', sans-serif;
+        }
+
+        .tag-list>ul>li {
+            font-style: italic;
+            color: #909090;
+        }
+
+        .tag-list>.hidener {
+            width: 116px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            background: linear-gradient(270deg, #232830 0.01%, rgba(35, 40, 48, 0.00) 100%);
+        }
+
+        .posts {
+            margin-top: 108px;
+            display: flex;
+            gap: 37px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        .post {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            width: 390px;
+            height: 440px;
+            border-radius: 22px;
+            border: 1px solid #252930;
+            padding: 26px;
+            padding-bottom: 29px;
+            background-color: white;
+            position: relative;
+        }
+
+        .post>.image {
+            display: block;
+            height: 160px;
+            width: 100%;
+        }
+
+        .post>h2 {
+            margin-top: 33px;
+            color: #0F1217;
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .post>p {
+            color: #0F1217;
+            font-size: 16px;
+
+        }
+
+        .post>.footer {
+            display: flex;
+            gap: 26px;
+            color: #0F1217;
+            font-size: 16px;
+            position: absolute;
+            bottom: 27px;
+        }
+
+        .pagination {
+            margin-top: 130px;
+            font-family: 'Recursive', sans-serif;
+            font-style: italic;
+            font-size: 25px;
+            color: #909090;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 157px;   
+        }
+
+        .pagination>ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pagination>ul>li {
+            display: inline-block;
+        }
+
+        .pagination>ul>li>a {
+            display: block;
+            padding: 17px;
+        }
+
+        .pagination .active {
+            color: #FF7575;
+            border-top: 3px #FF7575 solid;
+        }
+
+        footer>hr {
+            margin-top: 157px;
+            height: 3px;
+            background-color: #4D4D4D;
+            opacity: 0.2;
+        }
+
+        footer {
+            color: #FFF;
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 32px;   
+        }
+
+        footer>.right {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        footer .sky {
+            font-size: 19px;
+            padding: 4px 13px;
+            background-color: #4699E0;
+            border-radius: 5px;
+        }
+
+        footer .site {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 1698px) {
+            body {
+                padding: 80px 100px;
+            }
+        }
+
+        @media screen and (max-width: 1066px) {
+            body {
+                padding: 50px 50px;
+            }
+        }
+
+        @media screen and (max-width: 966px) {
+            header>img {
+                height: 100px;
+                width: 100px
+            }
+
+            header>h1 {
+                font-size: 40px;
+            }
+
+            header>p {
+                font-size: 25px;
+            }
+
+            nav>a {
+                font-size: 25px;
+            }
+
+            nav>ul>li {
+                font-size: 20px;
+            }
+
+            .tag-list>ul {
+                font-size: 20px;
+                top: 7px
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .post>.footer {
+                bottom: 7px
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <a href="">writing.dev</a>
+        <ul>
+            <li>
+                <a href="">categories</a>
+            </li>
+            <li>
+                <a href="">articles</a>
+            </li>
+            <li>
+                <a href="">about</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <img src="images/logo.svg">
+        <h1>Writings for Developers</h1>
+        <p>Curated collection of articles for busy developers</p>
+    </header>
+
+    <hr>
+    <main>
+        <div class="tag-list">
+            <div class="tag-list-icons">
+                <img id="grid-icon" src="images/grid-icon.svg">
+                <img id="list-icon" src="images/list-icon.svg">
+            </div>
+            <ul>
+                <li><a href="">JavaScript</a></li>
+                <li><a href="">DevOps</a></li>
+                <li><a href="">Cloud</a></li>
+                <li><a href="">Transform</a></li>
+                <li><a href="">Architecture</a></li>
+                <li><a href="">Scalability</a></li>
+                <li><a href="">Explainers</a></li>
+                <li><a href="">SQL</a></li>
+                <li><a href="">BackEnd</a></li>
+                <li><a href="">FrontEnd</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <div class="hidener"></div>
+        </div>
+        <section class="posts">
+            <div class="post">
+                <img class="image" src="images/post1.png" alt="Prespective room">
+                <h2>Build continuous integration pipelines with GitHub Actions</h2>
+                <p>GitHub actions provide a really powerful way to integrate
+                    continuous integration and delivery into your applications.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post2.png" alt="a python on tree">
+                <h2>Python for the Absolute beginners</h2>
+                <p>Python is the most popular programming language out
+                    there and it is used for so many different industries.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post3.png" alt="Whale in sea">
+                <h2>Docker from Zero to Hero</h2>
+                <p>Learn what is Docker and how Docker is used in the whole
+                    software development process.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post4.png" alt="Gears">
+                <h2>Build continuous integration pipelines with GitHub Actions</h2>
+                <p>GitHub actions provide a really powerful way to integrate
+                    continuous integration and delivery into your applications.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post5.png" alt="A bridge over river">
+                <h2>Python for the Absolute beginners</h2>
+                <p>Python is the most popular programming language out
+                    there and it is used for so many different industries.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post6.png" alt="A robat">
+                <h2>Docker from Zero to Hero</h2>
+                <p>Learn what is Docker and how Docker is used in the whole
+                    software development process.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post7.png" alt="Sunset over a lake">
+                <h2>Build continuous integration pipelines with GitHub Actions</h2>
+                <p>GitHub actions provide a really powerful way to integrate
+                    continuous integration and delivery into your applications.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post8.png" alt="Sunset over mountain">
+                <h2>Python for the Absolute beginners</h2>
+                <p>Python is the most popular programming language out
+                    there and it is used for so many different industries.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+            <div class="post">
+                <img class="image" src="images/post9.png" alt="A man stand in front of a river">
+                <h2>Docker from Zero to Hero</h2>
+                <p>Learn what is Docker and how Docker is used in the whole
+                    software development process.</p>
+                <div class="footer">
+                    <div class="date">June 24, 2022</div>
+                    <img class="ecllips" src="images/ecllipse.svg">
+                    <div class="tag">DevOps</div>
+                </div>
+            </div>
+        </section>
+        <div class="pagination">
+            <a class="previous" href="">Previous</a>
+            <ul>
+                <li><a href="">1</a></li>
+                <li><a class="active" href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+            </ul>
+            <a class="next" href="">Next</a>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <div class="right">
+            <a class="site" href="">writing.dev</a>
+            <a class="sky" href="">by @kamrify</a>
+        </div>
+        <a href="" class="sky"> 
+            <img src="images/twitter.svg" alt="twitter">
+            Follow @writingdev
+        </a>
+    </footer>
+</body>
+
+</html>
